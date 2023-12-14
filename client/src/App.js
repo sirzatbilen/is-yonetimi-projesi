@@ -1,10 +1,15 @@
-import './App.css';
+import React from "react";
+import { Route, Routes } from 'react-router-dom';
+import Home from "./components/Home/Home";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      sa
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/raporlar" element={<div>Raporlar Sayfasi</div>} />
+      <Route path="/ayarlar" element={<div>Ayarlar Sayfasi</div>} />
+    </Routes>
   );
 }
 
